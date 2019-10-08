@@ -1,7 +1,7 @@
 # Developer Test
 
-3 test questions. No restriction on language. Submit source code with instructions
-how to execute it, test code, time and memory complexity analysis.
+* 3 test questions. No restriction on language. Submit source code with instructions
+how to execute it, test code, time and memory complexity analysis. *
 
 ## Question 1. Data Store and Load
 A program uses an array ! of map(dictionary). The keys and values of each
