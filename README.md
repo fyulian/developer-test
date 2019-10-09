@@ -65,4 +65,3 @@ potentially revel the nature of the repo, or you can share it as compressed file
 2. You can be in constant sync with the application's progress via the GitHub repository
 and we can provide regular feedback, if required.
 3. We request you to delete the repo after your final interview.
-
