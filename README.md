@@ -1,3 +1,11 @@
+Test
+
+```javascript {.line-numbers}
+function add(x, y) {
+  return x + y
+}
+```
+
 # Developer Test
 
 * 3 test questions. No restriction on language. Submit source code with instructions
