@@ -8,13 +8,17 @@ A program uses an array ! of map(dictionary). The keys and values of each
 map(dictionary) are both strings. In different languages, the corresponding type of map
 is: PHP array, Java HashMap, C++ std::map, Objective-C NSDictionary, Swift Dictionary,
 Python dict, JavaScript object, etc. For example:
+```
 a[0]["key1"]="value1" a[0]["key2"]="value2" a[1]["keyA"]="valueA" ...
+```
 In order to store and load array !, we use a string-based format where each line
 corresponds to each element of array !:
 text="key1=value1;key2=value2\nkeyA=valueA\n..."
 Please implement a store function and a load function.
+```
 text=store(a); //store ! in a string-type variable "#$" a=load(text); //load array ! from
 variable "#$"
+```
 You must follow the format:
 key/value pairs are separated by '=' and ';' key/value may contain any character
 items are separated by '\n’.
