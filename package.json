@@ -1,0 +1,22 @@
+{
+  "name": "developer-test",
+  "version": "1.0.0",
+  "description": "Developer Test",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/fyulian/developer-test.git"
+  },
+  "keywords": [
+    "developer-test"
+  ],
+  "author": "Fajar Yulian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/fyulian/developer-test/issues"
+  },
+  "homepage": "https://gitlab.com/fyulian/developer-test#readme"
+}
