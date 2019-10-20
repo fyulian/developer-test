@@ -1,11 +1,3 @@
-Test
-
-```javascript {.line-numbers}
-function add(x, y) {
-  return x + y
-}
-```
-
 # Developer Test
 
 * 3 test questions. No restriction on language. Submit source code with instructions
@@ -46,8 +38,7 @@ and 3 edges:
 A->B
 B->C
 A->C
-With origin vertex A, the output is 5, where optimal path is A → B → C with total weight 1
-+ 2 + 2 = 5.
+With origin vertex A, the output is 5, where optimal path is A → B → C with total weight 1 + 2 + 2 = 5.
 Note: The assumption here is directed acyclic graph. What if the graph may not be
 acyclic, how to avoid infinite loop caused by cycles?
 ———————————————————————————————————————
