@@ -148,7 +148,7 @@ What we care about:
 > leverage today's best coding practices
 
 ### Testing: 
-Run three scenarios by running
+Run testing
 ```
 node run-retail-discount.js
 ```
