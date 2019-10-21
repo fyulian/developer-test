@@ -17,9 +17,9 @@ rl.on('line', (line) => {
         var ret = storenload.load(input);
         console.log(ret);
 
-        console.log(`Running store(\n`);
+        console.log(`\nRunning store(`);
         console.log(`${ret}`);
-        console.log(`Result:`);
+        console.log(`)\nResult:`);
         var ret2 = storenload.store(ret);
         var tmp2 = ret2.replace(/\n/g, '\\n');
         console.log(`${ret2}`);

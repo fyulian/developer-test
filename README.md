@@ -22,9 +22,38 @@ variable "#$"
 You must follow the format:
 key/value pairs are separated by '=' and ';' key/value may contain any character
 items are separated by '\n’.
-———————————————————————————————————————
-———————————————————————————————————————
-————————————
+
+### Solution: 
+For store() function: use simple string concatenation for each iteration in the Map object
+
+For load() function: use simple string split for the input and update (set) the Map object with the corresponding key
+
+### Testing: 
+```
+> node run-store-n-load.js
+```
+Result
+```
+Enter string based format then enter blank after the last line
+(eg. key1=value1;key2=value2\nkeyA=valueA\nkeyC=valueC\n):
+key1=abc;key2=def
+keyA=ABC;keyZ=Zzzzz
+
+Running load("key1=abc;key2=def\nkeyA=ABC;keyZ=Zzzzz")
+Result:
+[ Map { 'key1' => 'abc', 'key2' => 'def' },
+  Map { 'keyA' => 'ABC', 'keyZ' => 'Zzzzz' } ]
+
+Running store(
+[object Map],[object Map]
+)
+Result:
+key1=abc;key2=def
+keyA=ABC;keyZ=Zzzzz
+In string:
+"key1=abc;key2=def\nkeyA=ABC;keyZ=Zzzzz"
+```
+
 
 ## Question 2. Finding Optimal Path
 Assume there is a directed acyclic graph, where every vertex has a positive weight. We
