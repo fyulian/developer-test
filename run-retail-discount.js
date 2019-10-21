@@ -4,7 +4,6 @@ const User = require('./retail-discount').User;
 const Bill = require('./retail-discount').Bill;
 const Item = require('./retail-discount').Item;
 
-
 var input = "";
 
 const rl = readline.createInterface({
@@ -79,37 +78,38 @@ const question1 = () => {
   }
 
   const main = async () => {
-    //await question1();
-    //await question2();
-    //await question3();
+    await question1();
+    await question2();
+    await question3();
 
-    console.log(new Item("test", "grocery", 10000));
-    return 0;
-/*
+    console.log(new Date(registerDate));
+
     console.log("Enter items in format: item|type|price, eg: Milk|grocery|18000");
 
     do {
         await questionItem();
 
-        if(lineItem !== "" && lineItem.trim() !== "") {
+        if(lineItem !== "" /*&& lineItem.trim() !== ""*/) {
             let item = lineItem.split("|");
-            console.log(lineItem);
-            console.log(new Item(item[0], item[1], item[2]));
-            //items.push(new Item(item[0], item[1], item[2]));
+            //console.log(lineItem);
+            //console.log(new Item(item[0], item[1], parseInt(item[2])));
+            items.push(new Item(item[0], new Date(item[1]), parseInt(item[2])));
+            console.log("Item entered. Enter new items in format: item|type|price, eg: Milk|grocery|18000 or blank to stop");
         }
 
-    } while (lineItem !== "" && lineItem.trim() !== "");
+      } while (lineItem !== "" /*&& lineItem.trim() !== ""*/);
 
     rl.close();
 
-    let user = new new User(userId, userType, registerDate);
+    let user = new User(userId, userType, new Date(registerDate));
+    console.log(user);
     let bill = new Bill(user, items);
 
     console.log(user);
     console.log("Items:");
     console.log(items);
     console.log(`Total Price: ${bill.totalPrice()}`);
-*/
+
 }
 
 main();
