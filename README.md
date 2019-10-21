@@ -146,6 +146,14 @@ What we care about:
 > test coverage
 > code to be generic and simple
 > leverage today's best coding practices
+
+### Testing: 
+Run three scenarios by running
+```
+node run-retail-discount.js
+```
+
+
 Getting Started
 1. To start with, you can create one GitHub Repository and share it with us. While picking
 a name for the repo do not include, name of the company, purpose or anything that might
@@ -153,3 +161,4 @@ potentially revel the nature of the repo, or you can share it as compressed file
 2. You can be in constant sync with the application's progress via the GitHub repository
 and we can provide regular feedback, if required.
 3. We request you to delete the repo after your final interview.
+
