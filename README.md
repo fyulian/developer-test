@@ -24,6 +24,8 @@ key/value pairs are separated by '=' and ';' key/value may contain any character
 items are separated by '\n’.
 
 ### Solution: 
+Requirements: nodejs (https://nodejs.org/en/download/)
+
 For store() function: use simple string concatenation for each iteration in the Map object
 
 For load() function: use simple string split for the input and update (set) the Map object with the corresponding key
@@ -32,7 +34,7 @@ For load() function: use simple string split for the input and update (set) the 
 ```
 > node run-store-n-load.js
 ```
-Result
+*Result:*
 ```
 Enter string based format then enter blank after the last line
 (eg. key1=value1;key2=value2\nkeyA=valueA\nkeyC=valueC\n):
@@ -75,9 +77,58 @@ A->C
 With origin vertex A, the output is 5, where optimal path is A → B → C with total weight 1 + 2 + 2 = 5.
 Note: The assumption here is directed acyclic graph. What if the graph may not be
 acyclic, how to avoid infinite loop caused by cycles?
-———————————————————————————————————————
-———————————————————————————————————————
-—————————————
+
+### Solution: 
+Requirements: nodejs (https://nodejs.org/en/download/)
+
+Use a modified Djikstra algorithm to find the optimal path. 
+*part 1:* 
+* construct a hash table with each vertex as key, value contains weight, connection to other vertex, and solution (maxWeight and path)
+* update the hash table with connection to all vertex
+* put all vertex to an array of unvisited vertices
+
+Time analysis: O(V + E)
+
+*part 2:*
+for each vertex starting from the origin vertex do: 
+* for each connected vertices that is in unvisited vertices
+  - check if there is a cyclic path by going tho this vertex by checking all the previous path
+  - check if the total weight is larger that the current total weight, if so update with the new total weight and path
+
+Time analysis: O(V + E)
+for each vertex (V), only connected edges (E) to the vertex is checked, there is no edges is checked twice because of the construction of the hash table in part 1
+
+*Cycle detection:* 
+for every visit to a new vertex, check all the ancestor (previous path) if the vertex we currently visit is already in the ancestor (previous) list.
+
+
+### Testing: 
+Run three scenarios by running
+```
+node run-optimal-path.js
+```
+*Result:*
+```
+Scenario 1
+Vertices: A1,B2,C2
+Edges: A->B,B->C,A->C
+Origin: A
+Optimum path: A,B,C, with total weight: 5
+
+Scenario 2
+Vertices: B2,C10,D2,A1,E5
+Edges: A->B,B->D,A->C,C->E,D->E
+Origin: A
+Optimum path: A,C,E, with total weight: 16
+
+Scenario 3: Cyclic
+Vertices: A2,B3,C2,D1,E5
+Edges: A->B,B->C,C->D,D->E,D->B,A->D
+Origin: A
+Failed: Cycle detected, trying to add: D to path: A,D,B
+```
+
+*Note:* please modify file run-optimal-path.js to modify or run more scenarios.
 
 ## Question 3.
 On a retail website, the following discounts apply:
